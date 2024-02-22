@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<title>评论 - azQAQ 的工具导航</title>
+<!--mdui-->
+<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+<!--正文部分-->
+<div class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <a href="./" class="mdui-btn mdui-btn-icon">
+        <i class="mdui-icon material-icons">home</i>
+      </a>
+      <a href="./" class="mdui-typo-title">azQAQ 的工具导航</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+        <a href="https://bing.com" class="mdui-btn mdui-btn-icon mdui-ripple">
+          <i class="mdui-icon material-icons">&#xe8b6;</i>
+          </a>
+      </div>
+      <a href="javascript:location.reload ()" class="mdui-btn mdui-btn-icon">
+        <i class="mdui-icon material-icons">refresh</i>
+      </a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+        <i class="mdui-icon material-icons" disabled>chat</i>
+      </a>
+    </div>
+  </div>
+  <!-- 引入评论-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <!-- 正文 -->
+  <h2 align="center">评论</h2>
+  <p align="center">在这里您可以使用 GitHub 登录，然后发布评论</p>
+  <!--评论区-->
+  <div id="gitalk-container"></div>
+  <!--评论区系统引入-->
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '463432d8a03ff92c47e3',
+      clientSecret: 'db2e13abb7de9ade3b90138b717cd468e91a09ac',
+      repo: 'Comment-2',
+      owner: 'azdyqwo',
+      admin: ['azdyqwo'],
+      id: 'toolnav',      // Ensure uniqueness and length less than 50
+      distractionFreeMode: true,  // Facebook-like distraction free mode
+      Number: '4'
+    })
+    
+    gitalk.render('gitalk-container')
+    </script>
+    <div class="mdui-divider-inset"></div>
+    <p align="center">The page made by <a href="https://azqaq.top">azQAQ</a></p>
+    <p align="center">The web page UI by <a href="https://mdui.org">MDUI</a></p>
+    <p align="center">The static hosting of the website is provided by <a href="https://github.com">GitHub Pages</a></p>
+    <p align="center">The commenting feature is provided by <a href="https://gitalk.github.io">Gitalk</a></p>
